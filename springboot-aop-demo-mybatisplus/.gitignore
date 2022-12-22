@@ -29,6 +29,7 @@
 # Android Studio
 *.iml
 .idea
+target
 build/
 Plugin
 Module

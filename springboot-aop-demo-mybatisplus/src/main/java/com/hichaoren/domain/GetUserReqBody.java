@@ -8,4 +8,7 @@ import lombok.Data;
 @Data
 public class GetUserReqBody {
     private Integer id;
+
+    private int pageIndex;
+    private int pageSize;
 }
