@@ -12,12 +12,14 @@
         <module name="spring-aop-mybatis" />
         <module name="spring-aop-advice-type" />
         <module name="spring-aop-proxy" />
+        <module name="springboot-aop-demo-mybatisplus" />
       </profile>
     </annotationProcessing>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="springboot-aop-demo" options="-parameters" />
+      <module name="springboot-aop-demo-mybatisplus" options="-parameters" />
     </option>
   </component>
 </project>

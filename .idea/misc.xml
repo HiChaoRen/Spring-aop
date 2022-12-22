@@ -80,6 +80,7 @@
         <option value="$PROJECT_DIR$/spring-aop-advice-type/pom.xml" />
         <option value="$PROJECT_DIR$/spring-aop-proxy/pom.xml" />
         <option value="$PROJECT_DIR$/springboot-aop-demo/pom.xml" />
+        <option value="$PROJECT_DIR$/springboot-aop-demo-mybatisplus/pom.xml" />
       </list>
     </option>
   </component>
