@@ -28,8 +28,7 @@
 
 # Android Studio
 *.iml
-.idea
-.idea
+.idea/
 build/
 Plugin
 Module

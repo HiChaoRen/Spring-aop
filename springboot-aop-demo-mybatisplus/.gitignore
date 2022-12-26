@@ -1,44 +1,31 @@
-#*.iml
-#.gradle
-#local.properties
-#.idea
-#.DS_Store
-#
-#build/
-#/captures
-#.externalNativeBuild
-#Android_Lib_*
-#Android_TCT_*
-#Android_Plugin_*
-#app/
-#java/
-#build
-#local-config.gradle
-#
-#.DS_Store
-#local.properties
-#local-config.gradle
-#.navigation/
-#build/
-#captures/
-#/Android_Core
-#/Android_Service
-#/Android_DBGenerator
-#app/etongAndroid.keystore
-
-# Android Studio
-*.iml
-.idea
-target
-build/
-Plugin
-Module
-Library
+HELP.md
 target/
-captures/
-buildSrc/
-.externalNativeBuild
-.navigation
+!.mvn/wrapper/maven-wrapper.jar
+!**/src/main/**
+!**/src/test/**
 
-# Mac
-.DS_Store
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+
+### NetBeans ###
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+build/
+
+### VS Code ###
+.vscode/
