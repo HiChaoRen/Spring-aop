@@ -1,13 +1,17 @@
-# 添加 Java 8 镜像来源
-FROM java:8
-
-# 添加参数
-ARG JAR_FILE
-
-# 添加 Spring Boot 包
-ADD target/${JAR_FILE} app.jar
-
+# 该镜像需要依赖的基础镜像
+FROM openjdk:8-jdk-alpine
+# 声明服务运行在8080端口
 EXPOSE 80
-
-# 执行启动命令
-ENTRYPOINT ["java","-Djava.security.egd=file:/dev/./urandom","-jar","/app.jar"]
+# 将当前目录下的jar包复制到docker容器的/目录下
+ADD ./target/springboot-aop-demo-mybatisplus.jar springboot-aop-demo-mybatisplus.jar
+# 指定临时文件目录
+VOLUME /tmp
+# 项目配置的日志文件目录
+VOLUME /logs
+# 指定docker容器启动时运行jar包
+ENTRYPOINT ["java","-jar","/springboot-aop-demo-mybatisplus.jar"]
+# 指定时区
+ENV TZ=Asia/Shanghai
+RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
+# 指定维护者的名字
+MAINTAINER hichaoren
