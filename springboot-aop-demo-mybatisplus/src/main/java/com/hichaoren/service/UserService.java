@@ -1,5 +1,6 @@
 package com.hichaoren.service;
 
+import com.hichaoren.domain.ComponentInfo;
 import com.hichaoren.domain.User;
 
 import java.util.List;
@@ -18,4 +19,7 @@ public interface UserService {
     List<User> findAll();
 
     User findById(Integer id);
+
+
+    List<ComponentInfo> findAllComponentInfo();
 }

@@ -1,5 +1,6 @@
 package com.hichaoren.controller;
 
+import com.hichaoren.domain.ComponentInfo;
 import com.hichaoren.domain.GetUserReqBody;
 import com.hichaoren.domain.User;
 import com.hichaoren.exception.BusinessException;
@@ -48,6 +49,15 @@ public class UserController {
     @GetMapping("/getAll")
     public List<User> getAll() {
         List<User> userList = userService.findAll();
+        if (userList == null) {
+            throw new BusinessException("获取失败");
+        }
+        return userList;
+    }
+
+    @GetMapping("/all")
+    public List<ComponentInfo> getAllComponent() {
+        List<ComponentInfo> userList = userService.findAllComponentInfo();
         if (userList == null) {
             throw new BusinessException("获取失败");
         }

@@ -1,6 +1,7 @@
 package com.hichaoren.service.impl;
 
 import com.hichaoren.dao.UserDao;
+import com.hichaoren.domain.ComponentInfo;
 import com.hichaoren.domain.User;
 import com.hichaoren.service.UserService;
 
@@ -41,5 +42,10 @@ public class UserServiceImpl implements UserService {
     @Override
     public User findById(Integer id) {
         return userDao.findById(id);
+    }
+
+    @Override
+    public List<ComponentInfo> findAllComponentInfo() {
+        return userDao.findAllComponent();
     }
 }

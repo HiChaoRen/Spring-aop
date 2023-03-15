@@ -5,10 +5,10 @@ server:
 spring:
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource
-    driver-class-name: com.mysql.cj.jdbc.Driver
+    driver-class-name: org.mariadb.jdbc.Driver
     username: root
-    password: 1234
-    url: jdbc:mysql:///db1?useUnicode=true&characterEncoding=utf-8&serverTimezone=Asia/Shanghai&useSSL=false
+    password: sqlRoot@123
+    url: jdbc:mariadb://10.100.201.33:3306/db_exodia?characterEncoding=UTF-8&useSSL=false&serverTimeZone=UTC
 
 ---
 
