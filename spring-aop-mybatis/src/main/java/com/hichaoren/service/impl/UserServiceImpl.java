@@ -7,6 +7,7 @@ import com.hichaoren.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.io.IOException;
 import java.util.List;
 
 /**
@@ -36,5 +37,11 @@ public class UserServiceImpl implements UserService {
 
     public User findById(Integer id) {
         return userDao.findById(id);
+    }
+
+    public void transfer(String out, String in, Double money) throws IOException {
+        userDao.outMoney(out, money);
+                int i = 1/0;
+        userDao.inMoney(in, money);
     }
 }

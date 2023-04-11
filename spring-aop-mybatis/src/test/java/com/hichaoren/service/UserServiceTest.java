@@ -10,6 +10,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
+import java.io.IOException;
 import java.util.List;
 
 /**
@@ -33,7 +34,7 @@ public class UserServiceTest {
 
     @Test
     public void testDelete() {
-        userService.delete(4);
+        userService.delete(9);
     }
 
     @Test
@@ -54,5 +55,10 @@ public class UserServiceTest {
     public void testFindById() {
         User user = userService.findById(1);
         System.out.println("查询结果："+ user);
+    }
+
+    @Test
+    public void testTransfer() throws IOException {
+        userService.transfer("二师兄","三师妹",10D);
     }
 }

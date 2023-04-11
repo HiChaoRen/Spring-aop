@@ -2,10 +2,7 @@ package com.hichaoren.dao;
 
 import com.hichaoren.domain.User;
 
-import org.apache.ibatis.annotations.Delete;
-import org.apache.ibatis.annotations.Insert;
-import org.apache.ibatis.annotations.Select;
-import org.apache.ibatis.annotations.Update;
+import org.apache.ibatis.annotations.*;
 
 import java.util.List;
 
@@ -28,5 +25,13 @@ public interface UserDao {
 
     @Select("select * from user where id = #{id} ")
     User findById(Integer id);
+
+    @Update("update user set money = money + #{money} where name = #{name}")
+    void inMoney(@Param("name") String name, @Param("money") Double money);
+
+    @Update("update user set money = money - #{money} where name = #{name}")
+    void outMoney(@Param("name") String name, @Param("money") Double money);
+
+
 
 }

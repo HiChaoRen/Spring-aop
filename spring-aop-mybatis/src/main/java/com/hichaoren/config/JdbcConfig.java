@@ -4,6 +4,8 @@ import com.alibaba.druid.pool.DruidDataSource;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
+import org.springframework.jdbc.datasource.DataSourceTransactionManager;
+import org.springframework.transaction.TransactionManager;
 
 import javax.sql.DataSource;
 
@@ -29,6 +31,13 @@ public class JdbcConfig {
         dataSource.setUsername(username);
         dataSource.setPassword(password);
         return dataSource;
+    }
+
+    @Bean("transactionManager")
+    public TransactionManager transactionManager(DataSource dataSource){
+        DataSourceTransactionManager transactionManager = new DataSourceTransactionManager();
+        transactionManager.setDataSource(dataSource);
+        return transactionManager;
     }
 
 }
