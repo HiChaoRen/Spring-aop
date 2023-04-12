@@ -41,7 +41,6 @@ public class UserServiceImpl implements UserService {
 
     public void transfer(String out, String in, Double money) throws IOException {
         userDao.outMoney(out, money);
-                int i = 1/0;
         userDao.inMoney(in, money);
     }
 }

@@ -15,8 +15,8 @@ public class JDBCDemo {
         String password = "1234";
         Connection conn = DriverManager.getConnection(url, username, password);
         //3. 定义sql
-        String sql1 = "update user set money = money-100 where id = 1";
-        String sql2 = "update user set money = money+100 where id = 2";
+        String sql1 = "update user set money = money-10 where name ='二师兄'";
+        String sql2 = "update user set money = money+10 where name ='三师妹'";
         //4. 获取执行sql的对象 Statement
         Statement stmt = conn.createStatement();
         try {
@@ -30,9 +30,6 @@ public class JDBCDemo {
             int count2 = stmt.executeUpdate(sql2);//受影响的行数
             //6. 处理结果
             System.out.println(count2);
-            if (true){
-                throw new RuntimeException();
-            }
             // 提交事务
             conn.commit();
         } catch (Exception throwables) {

@@ -26,22 +26,24 @@ public class UserServiceTest {
     @Test
     public void testSave() {
         User user = new User();
-        user.setName("二师兄");
-        user.setMoney(1000.00);
-        user.setPassword("99999");
+        user.setId(4);
+        user.setName("师父");
+        user.setMoney(1000D);
+        user.setPassword("123456");
         userService.save(user);
     }
 
     @Test
     public void testDelete() {
-        userService.delete(9);
     }
 
     @Test
     public void testUpdate() {
         User user = new User();
-        user.setId(2);
-        user.setName("三师妹");
+        user.setId(4);
+        user.setName("大师兄");
+        user.setMoney(1000D);
+        user.setPassword("123456");
         userService.update(user);
     }
 
